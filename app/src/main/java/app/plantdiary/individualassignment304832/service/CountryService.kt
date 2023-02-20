@@ -8,8 +8,16 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.withContext
 import retrofit2.awaitResponse
 
-class CountryService {
+/**
+ * A service class that fetches country data from an online json file
+ *
+ */
 
+class CountryService {
+    /**
+     * fetches country data from an online json file
+     * @return a list of countries.
+     */
     suspend fun fetchCountries(): List<Country>? {
 
         return withContext(Dispatchers.IO) {
